@@ -1,28 +1,14 @@
-# MikanOS-devcontainer
-
+# 説明
 [ゼロからのOS自作入門](https://zero.osdev.jp/) で開発するOS (MikanOS) の
-開発環境が設定された [VSCode Devcontainer](https://code.visualstudio.com/docs/remote/containers) 設定ファイル.
+開発環境が設定された [VSCode Devcontainer](https://code.visualstudio.com/docs/remote/containers) 設定ファイルである[MikanOS-devcontainer](https://github.com/karaage0703/mikanos-devcontainer)に主にマシン再起動時などに毎回行う行程を少なくするための変更を加えたもの。
 
-[Docker ではじめる "ゼロからのOS自作入門" | Zenn](https://zenn.dev/sarisia/articles/6b57ea835344b6)
-
-ベースイメージの詳細については [github.com/sarisia/mikanos-docker](https://github.com/sarisia/mikanos-docker)
-を参照してください.
+環境：MacOS
 
 # 使い方
+基本の使い方は[MikanOS-devcontainer](https://github.com/karaage0703/mikanos-devcontainer)のREADMEを参照してください。
 
-## テンプレートからリポジトリを作成
-
-1. 当リポジトリページの右上 "Use this template" からリポジトリを作成 ([GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template))
-
-2. ローカルにチェックアウト
-
-3. VSCode で devcontainer を開く ([VSCode Docs](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container))
-
-## 既存のリポジトリに追加
-
-当リポジトリの `.devcontainer` ディレクトリ, 及び含まれるファイルをダウンロードし,
-既存のリポジトリに追加してください.
-
-# バグ, 要望
-
-[Twitter (@A1ces)](https://twitter.com/A1ces) や [Issues](https://github.com/sarisia/mikanos-devcontainer/issues) で教えてくださると嬉しいです！
+ゲストOS側でセットアップ（リポジトリのクローンなど）が終わっている状態で、Macを再起動した後に行う必要のある作業は以下。
+- XQuarts起動
+- ターミナルで "xhost + 127.0.0.1" 実行
+- VSCodeでmikanos-devcontainerのフォルダを開き、コンテナの中に入る
+- init_mikan.shを実行
