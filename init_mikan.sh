@@ -27,5 +27,9 @@ settings.json
 EOF
 git config --global core.excludesFile ${IGNOREFILE}
 
+# install gdb
+sudo apt update
+sudo apt install gdb
+
 echo -e "\nSuccessfully initialized"
 popd
