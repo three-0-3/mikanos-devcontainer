@@ -21,8 +21,8 @@ source ~/osbook/devenv/buildenv.sh
 # alias gdbmikan='gdb -x /workspaces/mikanos-devcontainer/debug_mikan'
 
 # from 18b
-alias mikan='(export OPTMCONF="-O2"; cd $OS_DIR; APPS_DIR=apps ./build.sh run)'
-alias mikanb='(export OPTMCONF="-O2"; export MAKE_OPTS="-B"; cd /workspaces/mikanos-devcontainer; rm disk.img; cd $OS_DIR/kernel; make clean; cd $OS_DIR/; APPS_DIR=apps ./build.sh run)'
+alias mikan='(export OPTMCONF="-O2"; cd $OS_DIR; APPS_DIR=apps RESOURCE_DIR=resource ./build.sh run)'
+alias mikanb='(export OPTMCONF="-O2"; export MAKE_OPTS="-B"; cd /workspaces/mikanos-devcontainer; rm disk.img; cd $OS_DIR/kernel; make clean; cd $OS_DIR/; APPS_DIR=apps RESOURCE_DIR=resource ./build.sh run)'
 
 # set global gitignore file
 IGNOREFILE="${HOME}/.gitignore_global"
